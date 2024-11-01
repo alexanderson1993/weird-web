@@ -8,6 +8,10 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
+import { useKeyNavigate } from "~/useKeyNavigate";
+import { SpeakerNotesProvider } from "~/components/SpeakerNotes";
+import { DmxContext, useUSBDMX } from "~/utils/dmx";
+import { Button } from "~/components/ui/button";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,6 +27,9 @@ export const links: LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  useKeyNavigate();
+  const device = useUSBDMX(false);
+
   return (
     <html lang="en">
       <head>
@@ -31,8 +38,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
-        {children}
+      <body className="dark:bg-gray-900 dark:text-white">
+        {!device.ready ? (
+          <Button
+            type="button"
+            onClick={async () => {
+              await device.activate();
+            }}
+          >
+            Activate
+          </Button>
+        ) : (
+          <DmxContext.Provider value={device}>
+            <SpeakerNotesProvider>{children}</SpeakerNotesProvider>
+          </DmxContext.Provider>
+        )}
+
         <ScrollRestoration />
         <Scripts />
       </body>
