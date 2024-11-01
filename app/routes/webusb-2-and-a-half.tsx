@@ -1,6 +1,4 @@
 import { SpeakerNotes } from "~/components/SpeakerNotes";
-import { codeToHtml } from "shiki";
-import { useLoaderData } from "@remix-run/react";
 
 export default function Chrome() {
   return (
@@ -8,6 +6,7 @@ export default function Chrome() {
       <img
         src="/assets/permission.jpg"
         className="w-[600px] [view-transition-name:webusb]"
+        alt="Permission Dialog"
       />
 
       <SpeakerNotes>

@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from "@remix-run/react";
+import { useLocation, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 
 /**
@@ -61,7 +61,7 @@ export function useKeyNavigate() {
       "message",
       (event) => {
         navigate(event.data.path, {
-          unstable_viewTransition: true,
+          viewTransition: true,
         });
       },
       { signal: controller.signal }
@@ -83,11 +83,11 @@ export function useKeyNavigate() {
 
       if (event.key === "ArrowRight") {
         navigate(slides[(slideIndex + 1) % slides.length], {
-          unstable_viewTransition: true,
+          viewTransition: true,
         });
       } else if (event.key === "ArrowLeft") {
         navigate(slides[(slideIndex - 1 + slides.length) % slides.length], {
-          unstable_viewTransition: true,
+          viewTransition: true,
         });
       }
     }

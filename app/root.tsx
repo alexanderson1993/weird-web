@@ -4,8 +4,8 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
+  type LinksFunction,
+} from "react-router";
 
 import "./tailwind.css";
 import { useKeyNavigate } from "~/useKeyNavigate";
@@ -48,12 +48,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
           >
             Activate
           </Button>
-        ) : (
-          <DmxContext.Provider value={device}>
-            <SpeakerNotesProvider>{children}</SpeakerNotesProvider>
-          </DmxContext.Provider>
-        )}
-
+        ) : null}
+        <DmxContext.Provider value={device}>
+          <SpeakerNotesProvider>{children}</SpeakerNotesProvider>
+        </DmxContext.Provider>
         <ScrollRestoration />
         <Scripts />
       </body>

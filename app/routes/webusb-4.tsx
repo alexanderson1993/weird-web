@@ -1,8 +1,8 @@
 import { SpeakerNotes } from "~/components/SpeakerNotes";
 import { codeToHtml } from "shiki";
-import { useLoaderData } from "@remix-run/react";
+import type * as Route from "./+types.webusb-4";
 
-export async function loader() {
+export async function clientLoader() {
   return {
     code: await codeToHtml(
       `  const universe = new Array(512).fill(0);
@@ -34,8 +34,7 @@ lightingDevice.transferOut(
   };
 }
 
-export default function Chrome() {
-  const { code } = useLoaderData<typeof loader>();
+export default function Chrome({ loaderData: { code } }: Route.ComponentProps) {
   return (
     <div className="flex h-screen items-center justify-center gap-24">
       <div

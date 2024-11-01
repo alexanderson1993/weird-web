@@ -1,8 +1,9 @@
+import type * as Route from "./+types.webusb-5";
+
 import { SpeakerNotes } from "~/components/SpeakerNotes";
 import { codeToHtml } from "shiki";
-import { useLoaderData } from "@remix-run/react";
 
-export async function loader() {
+export async function clientLoader() {
   return {
     code: await codeToHtml(
       `function update(channels: number[]) {
@@ -27,8 +28,7 @@ export async function loader() {
   };
 }
 
-export default function Chrome() {
-  const { code } = useLoaderData<typeof loader>();
+export default function Chrome({ loaderData: { code } }: Route.ComponentProps) {
   return (
     <div className="flex h-screen items-center justify-center gap-24">
       <div

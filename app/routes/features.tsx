@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { SpeakerNotes } from "~/components/SpeakerNotes";
-import { ClientOnly } from "remix-utils/client-only";
+
 import { useAudioRecorder } from "react-audio-voice-recorder";
 import Webcam from "react-webcam";
 import { useGeolocated } from "react-geolocated";
@@ -18,6 +18,7 @@ import {
   Environment,
   OrbitControls,
 } from "@react-three/drei";
+import { ClientOnly } from "~/lib/ClientOnly";
 
 export default function Chrome() {
   return (
