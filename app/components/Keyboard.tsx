@@ -1,19 +1,70 @@
 import { useEffect, useState } from "react";
 // @ts-ignore
 import Instruments from "webaudio-instruments";
-import { SpeakerNotes } from "~/components/SpeakerNotes";
+// @ts-ignore
+import WebSynth from "webaudio-tinysynth";
+import Tuna from "tunajs";
+
 import { cn } from "~/lib/utils";
 import { addMidiSubscriber } from "~/utils/midi";
+import { addGamepadCallback } from "~/utils/gamepad";
 
 export function Keyboard() {
   const [player] = useState(
     () => typeof window !== "undefined" && new Instruments()
   );
+  const [audioContext] = useState(
+    // biome-ignore lint/style/noNonNullAssertion: <explanation>
+    () => (typeof window !== "undefined" ? new AudioContext() : null)!
+  );
+  const [[destination, chorus, tremolo]] = useState(() => {
+    // biome-ignore lint/style/noNonNullAssertion: <explanation>
+    if (typeof window === "undefined") return [null!, null!, null!];
+    const tuna = new Tuna(audioContext);
+    const chorus = new tuna.Chorus({
+      rate: 1.5,
+      feedback: 0.8,
+      delay: 0.0045,
+      bypass: false,
+    });
+    const tremolo = new tuna.Tremolo({
+      intensity: 0.3, //0 to 1
+      rate: 5, //0.001 to 8
+      stereoPhase: 0, //0 to 180
+      bypass: false,
+    });
+    tremolo.connect(chorus);
+    chorus.connect(audioContext.destination);
+    return [tremolo, chorus, tremolo] as const;
+  });
+  const [synth] = useState(
+    () => typeof window !== "undefined" && new WebSynth()
+  );
+
+  useEffect(() => {
+    function callback(gamepad: Gamepad) {
+      chorus.rate = ((gamepad.axes[0] + 1) / 2) * 8;
+      synth.setBend(0, ((gamepad.axes[1] + 1) / 2) * 16384);
+    }
+
+    const unsub = addGamepadCallback(callback);
+    return () => unsub();
+  }, [synth]);
+
+  useEffect(() => {
+    synth.setAudioContext(audioContext, destination);
+  }, [synth, destination, audioContext]);
 
   const [instrument, setInstrument] = useState(88);
   useEffect(() => {
+    synth.setProgram(0, instrument);
+  }, [instrument, synth]);
+
+  useEffect(() => {
     const unsub = addMidiSubscriber((message) => {
-      if (
+      if (message.deviceName === "Roland Digital Piano") {
+        synth.send(message._data);
+      } else if (
         message.messageType === "noteon" &&
         "key" in message &&
         typeof message.key === "number"

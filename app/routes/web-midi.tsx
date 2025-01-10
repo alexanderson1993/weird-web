@@ -4,12 +4,14 @@ export default function Thorium() {
   return (
     <div className="flex h-screen items-center justify-center gap-24">
       <img
-        src="/assets/hardware.jpg"
+        src="/assets/midi-app.jpg"
         className="w-[1000px] [view-transition-name:me]"
+        alt=""
       />
       <SpeakerNotes>
-        Web MIDI and Web Gamepad lets players connect physical devices to make
-        the game feel just a little bit more immersive.
+        And back to MIDI and Web Audio, here's a little digital audio
+        workstation called Signal. It's open source, and it lets you hook your
+        MIDI instruments up to compose music, right in your web browser.
       </SpeakerNotes>
     </div>
   );

@@ -36,6 +36,7 @@ interface Message {
   pitchBend: number;
   controllerValue: number;
   controllerNumber: number;
+  deviceName: string;
 }
 type Sub = (value: ReturnType<typeof transformMidiMessage>) => void;
 
@@ -60,8 +61,10 @@ function transformMidiMessage(message: Message) {
       return { ...message, value: pitchBend / 32512 };
     case "noteon":
       return { ...message, value: Math.min(1, velocity) };
+    case "noteoff":
+      return { ...message, value: Math.min(1, velocity) };
     default:
-      throw new Error("Unhandled message type");
+      throw new Error(`Unhandled message type: ${messageType}`);
   }
 }
 
@@ -94,7 +97,7 @@ function handleMidiMessage(e: MIDIMessageEvent) {
     });
   }
   for (const sub of subscribers) {
-    sub(transformMidiMessage(message));
+    sub(transformMidiMessage({ ...message, deviceName: targetName }));
   }
 }
 

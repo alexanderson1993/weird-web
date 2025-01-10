@@ -24,7 +24,7 @@ export default function App() {
       </pre>
       <div className="w-full h-1/3 from-gray-900 to-transparent bg-gradient-to-b z-10 absolute " />
       <SpeakerNotes>
-        (Type of the MIDI device) MIDI works by sending different types of
+        (Type on the MIDI device) MIDI works by sending different types of
         messages with different attributes. So a "noteon" or "noteoff" message
         might be sent by a keyboard with a key and velocity, or a
         "controlchange" message sent by a knob with a value. Web MIDI works by
