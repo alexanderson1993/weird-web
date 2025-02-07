@@ -14,11 +14,11 @@ export default function Chrome() {
         />
       </div>
       <SpeakerNotes>
-        Heck, last year I gave a talk about how I wanted to create a timer
-        website that would send you a push notification when the timer was done.
-        Feels like something you should be able to just do with a Service
-        Worker, but it’s actually impossible without a server processing the
-        timers in the background. The web is limited.
+        Heck, last year I gave a talk about how I wanted to create a local-first
+        timer website that would send you a push notification when the timer was
+        done, without needing a server. Feels like something you should be able
+        to just do with a Service Worker, but it’s actually impossible without a
+        server processing the timers in the background. The web is limited.
       </SpeakerNotes>
     </div>
   );

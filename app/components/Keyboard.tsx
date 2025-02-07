@@ -69,6 +69,7 @@ export function Keyboard() {
         "key" in message &&
         typeof message.key === "number"
       ) {
+        console.log(message);
         if (message.value > 0) {
           const notes = keyMap.get(message.key) || [];
           for (const args of notes) {

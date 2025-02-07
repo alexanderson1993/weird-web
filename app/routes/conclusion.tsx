@@ -8,7 +8,9 @@ export default function Thorium() {
       <p className="font-mono text-2xl">
         https://github.com/alexanderson1993/weird-web
       </p>
-      <SpeakerNotes>So. Build weird stuff. The End.</SpeakerNotes>
+      <SpeakerNotes>
+        So, in conclusion, Build weird stuff. The End.
+      </SpeakerNotes>
     </div>
   );
 }

@@ -9,8 +9,11 @@ export default function Thorium() {
       />
       <SpeakerNotes>
         Web Audio lets me play sounds with different effects, like slight pitch
-        shifting or reverb. And I can mix the sound effects to different
-        channels, to provide surround sound for the sound effects.
+        shifting or reverb so every time your fire your phasers or torpedos it
+        sounds just a little different. And I can mix the sound effects to
+        different channels, to provide surround sound for the sound effects
+        based on where the sound happened in space. (yes, we let sound happen in
+        space, it's more fun that way)
       </SpeakerNotes>
     </div>
   );

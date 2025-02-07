@@ -73,8 +73,10 @@ export default function Chrome() {
         1
       </span>
       <SpeakerNotes>
-        But what if we could take those numbers and mess around with them before
-        turning them back into sound? That's what the Web Audio API lets us do.
+        And playing audio in the browser is easy - that's what the &lt;audio&gt;
+        tag is for. But what if we could take those amplitude numbers and mess
+        around with them before turning them back into sound? That's what the
+        Web Audio API lets us do.
       </SpeakerNotes>
     </div>
   );

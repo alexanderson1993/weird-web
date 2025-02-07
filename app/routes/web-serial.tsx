@@ -13,7 +13,8 @@ export default function Thorium() {
         USB port. When you plug it into your computer and go to the
         configuration website, the site connects to it using the even more
         low-level Web Serial API. So you can configure the soldering iron right
-        from your web browser, no drivers needed.
+        from your web browser. And the great thing is, you don't have to
+        download any extra programs or drivers.
       </SpeakerNotes>
     </div>
   );

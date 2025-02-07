@@ -9,7 +9,7 @@ export default function Thorium() {
       />
       <SpeakerNotes>
         Web MIDI and Web Gamepad lets players connect physical devices to make
-        the game feel just a little bit more immersive.
+        the game feel just a little bit more immersive and accessible.
       </SpeakerNotes>
     </div>
   );

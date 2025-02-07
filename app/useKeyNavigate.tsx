@@ -51,6 +51,7 @@ const slides = [
   "/thorium-2",
   "/thorium-3",
   "/thorium-4",
+  "/browsers",
   "/conclusion",
 ];
 export function useKeyNavigate() {

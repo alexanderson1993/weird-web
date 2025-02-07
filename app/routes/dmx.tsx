@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { SpeakerNotes } from "~/components/SpeakerNotes";
 import { DmxContext } from "~/utils/dmx";
+import { addGamepadCallback, calculateHatDirection } from "~/utils/gamepad";
 import { addMidiSubscriber } from "~/utils/midi";
 
 export default function DMX() {
@@ -10,6 +11,7 @@ export default function DMX() {
   >({});
   useEffect(() => {
     const unsub = addMidiSubscriber((message) => {
+      console.log(message.messageType);
       if (message.messageType === "controlchange") {
         const num = message.controllerNumber.toString();
         let value = message.value;
@@ -26,6 +28,23 @@ export default function DMX() {
       unsub();
     };
   });
+
+  useEffect(() => {
+    const clearCallback = addGamepadCallback((gamepad) => {
+      const hat = calculateHatDirection(gamepad.axes[9]);
+      console.log(hat);
+      setControllerState((state) => ({
+        ...state,
+        [16]: Math.min(255, Math.max(0, ((gamepad.axes[0] + 1) / 2) * 255)),
+        [17]: Math.min(255, Math.max(0, ((gamepad.axes[1] + 1) / 2) * 255)),
+        [18]: Math.min(255, Math.max(0, ((gamepad.axes[2] + 1) / 2) * 255)),
+        [19]: Math.min(255, Math.max(0, ((hat.x + 1) / 2) * 255)),
+        [20]: Math.min(255, Math.max(0, ((hat.y + 1) / 2) * 255)),
+      }));
+    });
+
+    return () => clearCallback();
+  }, []);
 
   useEffect(() => {
     const rgb1 = [

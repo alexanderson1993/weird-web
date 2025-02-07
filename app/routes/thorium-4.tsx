@@ -11,7 +11,7 @@ export default function Thorium() {
         And WebDMX let's users control their own DMX lights so their lighting
         can respond as the ship goes to red alert, is hit with weapons, or jumps
         to warp. It works over the internet and requires no downloads or
-        drivers. It really is the promise of the web.
+        drivers. It really fulfills the promise of the web.
       </SpeakerNotes>
     </div>
   );
