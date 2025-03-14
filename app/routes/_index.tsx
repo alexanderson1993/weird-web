@@ -11,7 +11,10 @@ export default function Index() {
           alt="me"
         />
       </Link>
-      <SpeakerNotes>Hi. I'm Alex. And I love the web.</SpeakerNotes>
+      <SpeakerNotes>
+        Hi. I'm Alex. And I love the web. And I want to talk about how we are
+        truly in a golden age of web APIs.
+      </SpeakerNotes>
     </div>
   );
 }

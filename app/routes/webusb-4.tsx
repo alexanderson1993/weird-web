@@ -5,7 +5,7 @@ import type * as Route from "./+types.webusb-4";
 export async function clientLoader() {
   return {
     code: await codeToHtml(
-      `  const universe = new Array(512).fill(0);
+      `const universe = new Array(512).fill(0);
 
 // This only supports ENTTEC Pro devices
 const ENTTEC_PRO_DMX_STARTCODE = 0x00;

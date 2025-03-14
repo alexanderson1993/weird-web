@@ -10,7 +10,7 @@ const slides = [
   "/",
   "/love-the-web",
   "/localhost",
-  "/chrome",
+  "/awesome-web",
   "/chrome-evil",
   "/cant-do-1",
   "/cant-do-2",
@@ -51,7 +51,8 @@ const slides = [
   "/thorium-2",
   "/thorium-3",
   "/thorium-4",
-  "/browsers",
+  "/chrome-only",
+  "/interop",
   "/conclusion",
 ];
 export function useKeyNavigate() {

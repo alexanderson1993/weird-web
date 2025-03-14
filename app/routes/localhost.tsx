@@ -8,8 +8,10 @@ export default function LoveTheWeb() {
         className="w-[600px] [view-transition-name:me]"
       />
       <SpeakerNotes>
-        And this is what makes the web so great. We’ve all felt how cool it is
-        to code up a website and send a link to our friends to show it off.
+        You know what makes the web so great? It's universal. It's world wide!
+        We’ve all felt how cool it is to code up a website and send a link to
+        our friends to show it off. And the best part? They didn't even have to
+        download or install anything special.
       </SpeakerNotes>
     </div>
   );

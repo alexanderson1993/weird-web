@@ -6,10 +6,18 @@ export async function clientLoader() {
   return {
     code: await codeToHtml(
       `const lightingDevice = await navigator.usb.requestDevice({
-  filters: [{ vendorId: 0x403, productId: 0x6001 }],
+  filters: [{ 
+    // FTDI (Future Technology Devices International)
+    vendorId: 0x403, 
+    // FT232 USB-to-serial adapter
+    productId: 0x6001
+  }],
 });
 
+// Open a connection to the device
 await lightingDevice.open();
+
+// Claim exclusive access to interface #0 of the device
 await lightingDevice.claimInterface(0);`,
       {
         lang: "ts",
