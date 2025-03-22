@@ -10,9 +10,9 @@ export default function LoveTheWeb() {
       <span className="text-[120px]">❤️</span>
       <img src="/assets/web.png" className="w-96 h-96" />
       <SpeakerNotes>
-        Hi. I'm Alex. And I love the web. And I want to talk about we are in a
-        golden era of building great user experiences using web platform
-        primitives
+        Hi. I'm Alex. I make fancy websites for an agency called Echobind. And I
+        love the web. And I want to talk about we are in a golden era of
+        building great user experiences using web platform primitives
       </SpeakerNotes>
     </div>
   );

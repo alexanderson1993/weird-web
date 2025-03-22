@@ -35,11 +35,11 @@ export default function DMX() {
       console.log(hat);
       setControllerState((state) => ({
         ...state,
-        [16]: Math.min(255, Math.max(0, ((gamepad.axes[0] + 1) / 2) * 255)),
-        [17]: Math.min(255, Math.max(0, ((gamepad.axes[1] + 1) / 2) * 255)),
-        [18]: Math.min(255, Math.max(0, ((gamepad.axes[2] + 1) / 2) * 255)),
-        [19]: Math.min(255, Math.max(0, ((hat.x + 1) / 2) * 255)),
-        [20]: Math.min(255, Math.max(0, ((hat.y + 1) / 2) * 255)),
+        [20]: Math.min(255, Math.max(0, ((gamepad.axes[0] + 1) / 2) * 255)),
+        [21]: Math.min(255, Math.max(0, ((gamepad.axes[1] + 1) / 2) * 255)),
+        [22]: Math.min(255, Math.max(0, ((gamepad.axes[2] + 1) / 2) * 255)),
+        [23]: Math.min(255, Math.max(0, ((hat.x + 1) / 2) * 255)),
+        [24]: Math.min(255, Math.max(0, ((hat.y + 1) / 2) * 255)),
       }));
     });
 
@@ -52,6 +52,10 @@ export default function DMX() {
       controllerState["17"] ?? 0,
       controllerState["18"] ?? 0,
       controllerState["19"] ?? 0,
+      controllerState["20"] ?? 0,
+      controllerState["21"] ?? 0,
+      controllerState["22"] ?? 0,
+      controllerState["23"] ?? 0,
     ];
     const universe = [0, 0, 0, 255, ...rgb1];
     device.update(universe);

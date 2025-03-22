@@ -13,8 +13,8 @@ export default function Chrome() {
         for all the major browsers to try to pass. Focus areas include things
         like the Navigation API, Dialog elements, view transitions, the :has
         selector, CSS popovers and anchors..., pointer events. Thanks to the
-        efforts of these web advocates, we are in a golden era of building great
-        user experiences using web platform primitives.
+        tireless efforts of these web advocates, we are in a golden era of
+        building great user experiences using web platform primitives.
       </SpeakerNotes>
     </div>
   );
