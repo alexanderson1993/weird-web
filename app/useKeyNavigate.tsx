@@ -64,6 +64,7 @@ export function useKeyNavigate() {
     broadcastChannel.addEventListener(
       "message",
       (event) => {
+        if (window.location.pathname === event.data.path) return;
         navigate(event.data.path, {
           viewTransition: true,
         });
