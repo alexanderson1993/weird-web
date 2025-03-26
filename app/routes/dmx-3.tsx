@@ -3,8 +3,8 @@ import { SpeakerNotes } from "~/components/SpeakerNotes";
 export default function Chrome() {
   return (
     <div className="flex h-screen items-center justify-center gap-4">
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <table className="w-full text-sm text-left rtl:text-right text-black font-sans">
+        <thead className="text-xs text-black uppercase bg-gray-50">
           <tr>
             <th scope="col" className="px-6 py-3">
               Channel
@@ -18,30 +18,30 @@ export default function Chrome() {
           </tr>
         </thead>
         <tbody>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <th
               scope="row"
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
             >
               1
             </th>
             <td className="px-6 py-4">0-255</td>
             <td className="px-6 py-4">Total Dimming</td>
           </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <th
               scope="row"
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
             >
               2
             </th>
             <td className="px-6 py-4">0-255</td>
             <td className="px-6 py-4">Red Dimming</td>
           </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <th
               scope="row"
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
             >
               3
             </th>
@@ -49,10 +49,10 @@ export default function Chrome() {
             <td className="px-6 py-4">Blue Dimming</td>
           </tr>
 
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <th
               scope="row"
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
             >
               4
             </th>
@@ -60,10 +60,10 @@ export default function Chrome() {
             <td className="px-6 py-4">Green Dimming</td>
           </tr>
 
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <th
               scope="row"
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
             >
               5
             </th>
@@ -71,10 +71,10 @@ export default function Chrome() {
             <td className="px-6 py-4">White Dimming</td>
           </tr>
 
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <th
               scope="row"
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
             >
               6
             </th>
@@ -82,35 +82,35 @@ export default function Chrome() {
             <td className="px-6 py-4">Amber Dimming</td>
           </tr>
 
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <th
               scope="row"
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
             >
               7
             </th>
             <td className="px-6 py-4">0-255</td>
             <td className="px-6 py-4">UV Dimming</td>
           </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <th
               scope="row"
               rowSpan={2}
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
             >
               8
             </th>
             <td className="px-6 py-4">0-10</td>
             <td className="px-6 py-4">Lights off</td>
           </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <td className="px-6 py-4">11-255</td>
             <td className="px-6 py-4">Strobe speed (slow fast)</td>
           </tr>
         </tbody>
       </table>
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <table className="w-full text-sm text-left rtl:text-right text-black">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
           <tr>
             <th scope="col" className="px-6 py-3">
               Channel
@@ -124,57 +124,57 @@ export default function Chrome() {
           </tr>
         </thead>
         <tbody>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <th
               scope="row"
               rowSpan={8}
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
             >
               9
             </th>
             <td className="px-6 py-4">0-9</td>
             <td className="px-6 py-4">Lights off</td>
           </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <td className="px-6 py-4">10-50</td>
             <td className="px-6 py-4">Color mixing mode</td>
           </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <td className="px-6 py-4">51-100</td>
             <td className="px-6 py-4">Hopping mode</td>
           </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <td className="px-6 py-4">101-150</td>
             <td className="px-6 py-4">Gradient mode</td>
           </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <td className="px-6 py-4">151-200</td>
             <td className="px-6 py-4">Mutation pattern</td>
           </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <td className="px-6 py-4">201-220</td>
             <td className="px-6 py-4">Jump voice control</td>
           </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <td className="px-6 py-4">221-240</td>
             <td className="px-6 py-4">Stroboscopic sound control</td>
           </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <td className="px-6 py-4">241-255</td>
             <td className="px-6 py-4">Mutation voice control</td>
           </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <th
               scope="row"
               rowSpan={2}
-              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
             >
               10
             </th>
             <td className="px-6 py-4">0</td>
             <td className="px-6 py-4">Lights off</td>
           </tr>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr className="bg-white border-b ">
             <td className="px-6 py-4">1-255</td>
             <td className="px-6 py-4">Speed (slow to fast)</td>
           </tr>

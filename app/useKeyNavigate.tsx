@@ -22,7 +22,6 @@ const slides = [
   "/flash-1",
   "/flash-2",
   "/gears",
-  "/blank-2",
   "/features",
   "/blank-3",
   "/waveform",

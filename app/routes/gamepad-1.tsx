@@ -29,7 +29,7 @@ class XboxControllerMac final : public AbstractHapticGamepad {
     ...`,
       {
         lang: "ts",
-        theme: "github-dark",
+        theme: "github-light",
       }
     ),
   };

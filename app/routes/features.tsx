@@ -34,9 +34,12 @@ export default function Chrome() {
         )}
       </ClientOnly>
       <SpeakerNotes>
-        Now we can access media devices like cameras and microphones, store
-        entire LLMs inside browser’s local storage, pinpoint your physical
-        location, and render 3D graphics
+        It took a long time, but eventually browser engines realized there was
+        so much more they could provide website authors without compromising on
+        privacy and security. We’re living in a golden age of Web APIs. Now we
+        can access media devices like cameras and microphones, store entire LLMs
+        inside browser’s local storage, pinpoint your physical location, and
+        render 3D graphics
       </SpeakerNotes>
     </div>
   );

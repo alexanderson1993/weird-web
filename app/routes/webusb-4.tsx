@@ -28,7 +28,7 @@ lightingDevice.transferOut(
 );`,
       {
         lang: "ts",
-        theme: "github-dark",
+        theme: "github-light",
       }
     ),
   };

@@ -42,13 +42,13 @@ export default function Chrome() {
       context.lineTo(x, y);
     }
     context.strokeStyle = "#0088ff";
-    context.lineWidth = 2;
+    context.lineWidth = 4;
     context.stroke();
 
     context.beginPath();
     context.moveTo(width / 2, 0);
     context.lineTo(width / 2, height);
-    context.strokeStyle = "white";
+    context.strokeStyle = "#062458";
     context.stroke();
 
     if (textRef.current) {

@@ -4,6 +4,9 @@ export default function Chrome() {
   return (
     <div className="flex h-screen items-center justify-center gap-24">
       <img
+        style={{
+          filter: "invert() hue-rotate(180deg)",
+        }}
         src="/assets/stadia.jpg"
         className="w-[1000px] [view-transition-name:me]"
         alt="Stadia Controller"

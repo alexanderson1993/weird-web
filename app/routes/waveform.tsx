@@ -28,7 +28,7 @@ export default function Chrome() {
       context.lineTo(x, y);
     }
     context.strokeStyle = "#0088ff";
-    context.lineWidth = 2;
+    context.lineWidth = 4;
     context.stroke();
   });
   return (

@@ -13,8 +13,8 @@ export default function Chrome() {
       />
       <SpeakerNotes>
         That means, unlike Desktop apps, web browsers can’t just write to the
-        file system, open an HTTP server, or send UDP packets. ... There's
-        probably a joke there, but I'm worried you won't get it.
+        file system, open an HTTP server, or send UDP packets. ... There's a
+        joke there, but you might not get it
       </SpeakerNotes>
     </div>
   );

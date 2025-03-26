@@ -22,7 +22,7 @@ export default function App() {
           )
           .join("\n")}
       </pre>
-      <div className="w-full h-1/3 from-gray-900 to-transparent bg-gradient-to-b z-10 absolute " />
+      <div className="w-full h-1/3 from-white to-transparent bg-gradient-to-b z-10 absolute " />
       <SpeakerNotes>
         (Type on the MIDI device) MIDI works by sending different types of
         messages with different attributes. So a "noteon" or "noteoff" message

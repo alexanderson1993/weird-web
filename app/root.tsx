@@ -38,7 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="dark:bg-gray-900 dark:text-white">
+      <body className="bg-white text-gray-900">
         {!device.ready ? (
           <Button
             type="button"

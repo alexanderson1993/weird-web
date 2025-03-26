@@ -21,7 +21,7 @@ await lightingDevice.open();
 await lightingDevice.claimInterface(0);`,
       {
         lang: "ts",
-        theme: "github-dark",
+        theme: "github-light",
       }
     ),
   };

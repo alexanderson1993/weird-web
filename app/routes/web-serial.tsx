@@ -5,7 +5,7 @@ export default function Thorium() {
     <div className="flex h-screen items-center justify-center gap-24">
       <img
         src="/assets/solder.png"
-        className="w-[500px] [view-transition-name:me]"
+        className="w-[800px] [view-transition-name:me]"
         alt=""
       />
       <SpeakerNotes>

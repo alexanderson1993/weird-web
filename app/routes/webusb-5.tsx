@@ -22,7 +22,7 @@ export async function clientLoader() {
 }`,
       {
         lang: "ts",
-        theme: "github-dark",
+        theme: "github-light",
       }
     ),
   };

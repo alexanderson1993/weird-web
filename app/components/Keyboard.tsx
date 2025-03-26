@@ -55,7 +55,7 @@ export function Keyboard() {
     synth.setAudioContext(audioContext, destination);
   }, [synth, destination, audioContext]);
 
-  const [instrument, setInstrument] = useState(88);
+  const [instrument, setInstrument] = useState(0);
   useEffect(() => {
     synth.setProgram(0, instrument);
   }, [instrument, synth]);
@@ -88,7 +88,7 @@ export function Keyboard() {
   return (
     <>
       <select
-        className="text-2xl"
+        className="text-2xl text-white font-sans"
         value={instrument}
         onChange={(event) => setInstrument(Number(event.target.value))}
       >
@@ -98,7 +98,7 @@ export function Keyboard() {
           </option>
         ))}
       </select>
-      <div className="flex gap-px">
+      <div className="flex gap-px bg-black p-2 pr-5 rounded">
         {Array.from({ length: 34 }).map((_, i) => (
           <button
             key={`key-${

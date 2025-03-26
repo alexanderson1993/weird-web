@@ -25,7 +25,7 @@ lightingDevice.controlTransferOut({
 });`,
       {
         lang: "ts",
-        theme: "github-dark",
+        theme: "github-light",
       }
     ),
   };

@@ -29,13 +29,13 @@ export default function Chrome() {
       context.lineTo(x, y);
     }
     context.strokeStyle = "#0088ff";
-    context.lineWidth = 2;
+    context.lineWidth = 4;
     context.stroke();
 
     context.beginPath();
     context.moveTo(width / 2, 0);
     context.lineTo(width / 2, height);
-    context.strokeStyle = "white";
+    context.strokeStyle = "#062458";
     context.stroke();
 
     if (textRef.current) {
@@ -64,8 +64,7 @@ export default function Chrome() {
         a given time. Microphones detect those tiny fluctuations in air pressure
         and store them. Pump those numbers into a speaker at the right rate, and
         you've got audio. To give you an idea of how much data this is, Audio
-        CDs use 44,100 samples per second, which means each second of audio
-        stores 44,100 amplitude values.
+        CDs use 44,100 amplitude values to store 1 second of audio.
       </SpeakerNotes>
     </div>
   );
