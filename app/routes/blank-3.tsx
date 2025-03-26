@@ -3,14 +3,18 @@ import { SpeakerNotes } from "~/components/SpeakerNotes";
 export default function Chrome() {
   return (
     <div className="flex h-screen items-center justify-center gap-24">
-      <h1 className="font-bold text-6xl">You can just do things.</h1>
+      <img
+        src="assets/youcanjustdothings.jpg"
+        className="inset-0 w-screen h-screen object-cover fixed"
+        alt="You can just do things"
+      />
       <SpeakerNotes>
-        Those APIs have become pretty ubiquitous, but they aren't the only
-        WebAPIs that have been added to the platform. There are some other,
-        weirder APIs that you've probably never heard of, and would bet you've
-        never used. But I want to emphasize - these are all real APIs,
-        documented on MDN with W3C working group specifications. I'm not making
-        these up.
+        We're getting to the point where, in web browsers, you can just do
+        things. And these aren't the only WebAPIs that have been added to the
+        platform. There are some other, weirder APIs that you've probably never
+        heard of, and would bet you've never used. But I want to emphasize -
+        these are all real APIs, documented on MDN with W3C working group
+        specifications. I'm not making these up.
       </SpeakerNotes>
     </div>
   );

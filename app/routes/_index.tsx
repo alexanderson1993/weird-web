@@ -12,9 +12,9 @@ export default function Index() {
         />
       </Link>
       <SpeakerNotes>
-        Hi. I'm Alex. I make fancy websites for an agency called Echobind. And I
-        love the web. And I want to talk about how we are truly in a golden age
-        of web APIs.
+        Hi. I'm Alex. I make fancy websites for an agency called Echobind - you
+        should hire us to help you make fancy websites. And I love the web. And
+        I want to talk about how we are truly in a golden age of web APIs.
       </SpeakerNotes>
     </div>
   );
